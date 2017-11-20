@@ -39,15 +39,15 @@ for video in movies.search(sort='addedAt:desc'):
     try:
       if json_obj['CHECKED'] == '0':
         status = 'New'
-        #if video.isWatched():
+        #if video.isWatched:
         #  video.markUnwatched()
       elif json_obj['CHECKED'] == '1':
         status = 'Checked'
-        if not video.isWatched():
+        if not video.isWatched:
           video.markWatched()
       elif json_obj['CHECKED'] == '2':
         status = 'Updated'
-        #if video.isWatched():
+        #if video.isWatched:
         #  video.markUnWatched()
       
       if len(video.labels) == 1:  
